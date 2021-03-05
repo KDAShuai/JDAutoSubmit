@@ -12,7 +12,7 @@ def send_ReminderEmail(good_name):
     msg = MIMEText('Congratulations!\r\nYour good:\r\n' + good_name + '\r\nis submitted in JD successfully!\r\nPlease check and pay for it!')
     msg['Subject'] = 'Successfully Snapped Up Good'
     msg['From'] = me
-    msg['To'] = me
+    msg['To'] = ''
     try:
         s = smtplib.SMTP()
         s.connect(mail_host)
